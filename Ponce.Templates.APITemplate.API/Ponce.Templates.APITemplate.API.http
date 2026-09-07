@@ -1,0 +1,6 @@
+@Ponce.Templates.APITemplate.API_HostAddress = http://localhost:5008
+
+GET {{Ponce.Templates.APITemplate.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

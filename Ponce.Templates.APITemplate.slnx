@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Ponce.Templates.APITemplate.API/Ponce.Templates.APITemplate.API.csproj" />
+  <Project Path="Ponce.Templates.APITemplate.Application/Ponce.Templates.APITemplate.Application.csproj" />
+  <Project Path="Ponce.Templates.APITemplate.Domain/Ponce.Templates.APITemplate.Domain.csproj" />
+  <Project Path="Ponce.Templates.APITemplate.Infrastructure/Ponce.Templates.APITemplate.Infrastructure.csproj" />
+</Solution>
