@@ -7,8 +7,4 @@
     <UseFileScopedNamespaces>true</UseFileScopedNamespaces>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
-  </ItemGroup>
-
 </Project>

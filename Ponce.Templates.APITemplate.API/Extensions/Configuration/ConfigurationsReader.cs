@@ -19,7 +19,6 @@ public static partial class ConfigurationExtensions
             Logger = configuration.GetGeneralLoggerConfiguration(databaseConfiguration),
             RateLimiterMaxCalls = configuration.GetRateLimiterMaxCalls(),
             Telemetry = configuration.GetTelemetryConfiguration(),
-            AutomatedServices = configuration.GetAutomatedServicesConfigurations(),
             Cache = configuration.GetCacheConfiguration(),
             Cors = configuration.GetCorsConfiguration(),
         };

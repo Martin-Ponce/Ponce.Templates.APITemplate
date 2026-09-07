@@ -20,6 +20,7 @@ public static class DbContextServiceExtensions
 {
     public static IServiceCollection AddAppDbContext(this IServiceCollection services, DatabaseConnectionConfiguration configuration)
     {
+        services.AddSingleton(configuration);
         services.AddDbContext<AppDbContext>(options =>
         {
             switch (configuration.Provider)

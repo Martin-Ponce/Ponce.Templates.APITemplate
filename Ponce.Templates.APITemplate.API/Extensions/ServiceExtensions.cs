@@ -8,14 +8,12 @@ using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
-using Ponce.Templates.APITemplate.API.BackgroundServices;
 using Ponce.Templates.APITemplate.API.Dtos.Configurations;
 using Ponce.Templates.APITemplate.API.Helpers;
 using Ponce.Templates.APITemplate.API.Helpers.HealthChecks;
 using Ponce.Templates.APITemplate.API.Helpers.Swagger;
 using Ponce.Templates.APITemplate.Application.Services;
 using Ponce.Templates.APITemplate.Domain.Contracts;
-using Ponce.Templates.APITemplate.Domain.Services;
 using Ponce.Templates.APITemplate.Infrastructure.Configurations;
 using Ponce.Templates.APITemplate.Infrastructure.Contexts;
 using Ponce.Templates.APITemplate.Infrastructure.Repositories;
@@ -118,9 +116,6 @@ public static class ServiceExtensions
         // Repositories
         services.AddScoped<IItemRepository, ItemRepository>();
 
-        // Domain services
-        services.AddScoped<ItemDomainService>();
-
         // Application services
         services.AddScoped<ItemService>();
         return services;
@@ -135,8 +130,6 @@ public static class ServiceExtensions
     public static IServiceCollection InjectConfigurations(this IServiceCollection services, GeneralConfiguration configuration)
     {
         services.AddSingleton(configuration.Cache);
-        services.AddSingleton(configuration.AutomatedServices);
-        services.AddSingleton(configuration.AutomatedServices.SampleScheduledJob);
         return services;
     }
 
@@ -203,13 +196,6 @@ public static class ServiceExtensions
                             .AddAspNetCoreInstrumentation()
                             .AddHttpClientInstrumentation()
                             .AddPrometheusExporter());
-        return services;
-    }
-
-    public static IServiceCollection ConfigureAutomatedServices(this IServiceCollection services, GeneralConfiguration configuration)
-    {
-        if (configuration.AutomatedServices.SampleScheduledJob.Enabled)
-            services.AddHostedService<SampleScheduledJob>();
         return services;
     }
 }

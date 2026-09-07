@@ -14,8 +14,6 @@ public static class ItemEndpointGroup
             .MapGetItems()
             .MapGetItem()
             .MapSaveItem()
-            .MapUpdateItem()
-            .MapToggleItem()
             .MapDeleteItem();
         return appEndpoints;
     }

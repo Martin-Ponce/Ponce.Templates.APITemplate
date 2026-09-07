@@ -27,8 +27,7 @@ public static class Program
                 .ConfigureHealthChecks()
                 .InjectConfigurations(generalConfiguration)
                 .ConfigureRateLimiter(generalConfiguration)
-                .ConfigureTelemetry(generalConfiguration)
-                .ConfigureAutomatedServices(generalConfiguration);
+                .ConfigureTelemetry(generalConfiguration);
             if (generalConfiguration.Cache.CacheEnabled)
                 builder.Services.AddMemoryCache();
 
