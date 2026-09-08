@@ -5,9 +5,7 @@ using Ponce.Templates.APITemplate.Infrastructure.Contexts;
 namespace Ponce.Templates.APITemplate.API.Helpers.HealthChecks;
 
 /// <summary>
-/// The original project used the company's "Bisoft.DatabaseConnections" package
-/// (<c>ConnectionStringValidatorFactory</c>) to validate connectivity without going through EF Core.
-/// Plain EF Core's <see cref="DatabaseFacade.CanConnectAsync"/> is a generic equivalent.
+/// Validates database connectivity via <see cref="DatabaseFacade.CanConnectAsync"/>.
 /// </summary>
 public class DatabaseHealthCheck(AppDbContext context) : IHealthCheck
 {

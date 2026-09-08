@@ -8,13 +8,6 @@ namespace Ponce.Templates.APITemplate.Infrastructure.Configurations;
 
 /// <summary>
 /// Wires up <see cref="AppDbContext"/> against whichever provider is configured.
-/// <para>
-/// The original project used the company's "Bisoft.DatabaseConnections" package for this
-/// (an <c>AddDbContext&lt;TContext&gt;(IDbConnectionConfiguration)</c> helper that also handled
-/// provider-specific retry policies, an <c>EnvironmentDeployerFactory</c> for schema creation, and
-/// a <c>ConnectionStringValidatorFactory</c> used by the health check). Since the template assumes
-/// a single, plain EF Core database, this is a minimal generic replacement.
-/// </para>
 /// </summary>
 public static class DbContextServiceExtensions
 {

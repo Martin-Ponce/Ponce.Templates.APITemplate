@@ -8,21 +8,8 @@ namespace Ponce.Templates.APITemplate.API.Extensions.Configuration;
 public static partial class ConfigurationExtensions
 {
     /// <summary>
-    /// Reads a "DatabaseConnections:{sectionName}:ConnectionString" value (env var override
-    /// supported), decrypting it on Windows if the appsettings value is protected.
-    /// <para>
-    /// This mirrors the original method almost verbatim. Two calls there depended on the
-    /// company's internal packages and have no generic equivalent, so they're left as comments:
-    /// <list type="bullet">
-    /// <item>the original threw <c>Bisoft.Exceptions</c>' <c>TEnvironmentException.MissingConfiguration(...)</c>
-    /// instead of the <see cref="ConfigurationException"/> used below;</item>
-    /// <item><c>AppConfiguration.Unprotect(connectionString)</c> (from the company's
-    /// "TechSoft.Configuration.EncriptacionAppSettings" package) decrypted a connection string that
-    /// had been protected with Windows DPAPI via that same package's tooling. There is no generic
-    /// stand-in for that - either bring the package back if you have access to it, or store the
-    /// connection string unencrypted / use user-secrets / a secret manager instead.</item>
-    /// </list>
-    /// </para>
+    /// Reads a "DatabaseConnections:{sectionName}:ConnectionString" value, with environment
+    /// variable override support.
     /// </summary>
     private static string GetConnectionStringValue(this IConfiguration configuration, string sectionName)
     {
@@ -31,8 +18,6 @@ public static partial class ConfigurationExtensions
                 ExceptionSources.APPSETTINGS,
                 $"Missing connection string '{sectionName}'"
             );
-        // if (Environment.OSVersion.Platform == PlatformID.Win32NT)
-        //     connectionString = AppConfiguration.Unprotect(connectionString); // Bisoft/TechSoft-specific DPAPI decryption, see summary above.
         return connectionString;
     }
 

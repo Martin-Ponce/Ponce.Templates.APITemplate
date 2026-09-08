@@ -39,8 +39,6 @@ public static partial class ConfigurationExtensions
         return result;
     }
 
-    // The original project called `configuration.SetEncryption()` here, which relied on the
-    // company's "TechSoft.Configuration.EncriptacionAppSettings" package to transparently decrypt
-    // DPAPI-protected appsettings values on Windows. There is no generic equivalent - use
-    // user-secrets/environment variables/a secret manager for sensitive configuration instead.
+    // Sensitive configuration (e.g. connection strings) should be supplied via user-secrets,
+    // environment variables, or a secret manager rather than stored in plain appsettings.json.
 }
