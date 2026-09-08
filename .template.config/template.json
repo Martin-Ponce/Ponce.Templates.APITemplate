@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Martin Ponce",
+  "classifications": [ "Web", "WebAPI", "Clean Architecture" ],
+  "identity": "Ponce.Templates.APITemplate",
+  "name": "Ponce API Template",
+  "shortName": "ponce-api",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Ponce.Templates.APITemplate",
+  "preferNameDirectory": true,
+  "symbols": {
+    "UserSecretsId": {
+      "type": "generated",
+      "generator": "guid",
+      "parameters": {
+        "defaultFormat": "D"
+      },
+      "replaces": "e0e55672-8e79-4b16-8cd6-ca06ad115943"
+    }
+  },
+  "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".git/**",
+        ".vs/**",
+        "**/*.user",
+        ".template.config/**"
+      ]
+    }
+  ]
+}
