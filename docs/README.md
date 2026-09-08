@@ -9,6 +9,7 @@ first time; afterwards, jump straight to the one you need.
 | 2 | [Creating Entities](02-creating-entities.md) | Domain layer: aggregate roots, validators, error codes/length limits, repository contracts. |
 | 3 | [Mapping Entities to the Database](03-mapping-entities-to-providers.md) | EF Core configuration per provider (SqlServer/Postgres/Sqlite), the configuration-strategy pattern, wiring a `DbSet` into `AppDbContext`. |
 | 4 | [Creating Endpoints](04-creating-endpoints.md) | Application layer (DTOs + service) and API layer (minimal-API endpoints), and wiring a feature into the app. |
+| 5 | [Running in a Container](05-docker-container.md) | Building/running the Docker image, and how connection strings and other settings are supplied via environment variables at run time. |
 
 ## Architecture at a glance
 

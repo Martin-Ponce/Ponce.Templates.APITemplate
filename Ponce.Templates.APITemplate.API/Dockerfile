@@ -13,6 +13,9 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Ponce.Templates.APITemplate.API/Ponce.Templates.APITemplate.API.csproj", "Ponce.Templates.APITemplate.API/"]
+COPY ["Ponce.Templates.APITemplate.Application/Ponce.Templates.APITemplate.Application.csproj", "Ponce.Templates.APITemplate.Application/"]
+COPY ["Ponce.Templates.APITemplate.Domain/Ponce.Templates.APITemplate.Domain.csproj", "Ponce.Templates.APITemplate.Domain/"]
+COPY ["Ponce.Templates.APITemplate.Infrastructure/Ponce.Templates.APITemplate.Infrastructure.csproj", "Ponce.Templates.APITemplate.Infrastructure/"]
 RUN dotnet restore "./Ponce.Templates.APITemplate.API/Ponce.Templates.APITemplate.API.csproj"
 COPY . .
 WORKDIR "/src/Ponce.Templates.APITemplate.API"
@@ -21,7 +24,7 @@ RUN dotnet build "./Ponce.Templates.APITemplate.API.csproj" -c $BUILD_CONFIGURAT
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Ponce.Templates.APITemplate.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Ponce.Templates.APITemplate.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false --no-restore
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
