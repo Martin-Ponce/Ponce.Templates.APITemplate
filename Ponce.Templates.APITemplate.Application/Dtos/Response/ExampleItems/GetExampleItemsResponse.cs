@@ -1,6 +1,6 @@
-namespace Ponce.Templates.APITemplate.Application.Dtos.Response.Items;
+namespace Ponce.Templates.APITemplate.Application.Dtos.Response.ExampleItems;
 
-public class SaveItemResponse
+public class GetExampleItemsResponse
 {
     public Guid Id { get; set; }
     public required string Name { get; set; }

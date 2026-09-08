@@ -114,10 +114,12 @@ public static class ServiceExtensions
         services.AddScoped<IRepository, Repository<AppDbContext>>();
 
         // Repositories
-        services.AddScoped<IItemRepository, ItemRepository>();
+        services.AddScoped<IExampleItemRepository, ExampleItemRepository>();
+        // Add one services.AddScoped<I<Feature>Repository, <Feature>Repository>() call per feature.
 
         // Application services
-        services.AddScoped<ItemService>();
+        services.AddScoped<ExampleItemService>();
+        // Add one services.AddScoped<<Feature>Service>() call per feature.
         return services;
     }
 

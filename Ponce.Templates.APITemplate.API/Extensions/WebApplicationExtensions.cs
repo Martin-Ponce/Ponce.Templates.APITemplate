@@ -1,7 +1,7 @@
 using Asp.Versioning.ApiExplorer;
 using Asp.Versioning.Builder;
 using Microsoft.OpenApi;
-using Ponce.Templates.APITemplate.API.Endpoints.Items;
+using Ponce.Templates.APITemplate.API.Endpoints.ExampleItems;
 using static Ponce.Templates.APITemplate.API.Helpers.ApiConstants;
 
 namespace Ponce.Templates.APITemplate.API.Extensions;
@@ -33,7 +33,7 @@ public static class WebApplicationExtensions
                               .AddOpenApi();
         // Once you add authentication back, chain `.RequireAuthorization()` here too.
         apiEndpoints
-            .MapItemEndpoints();
+            .MapExampleItemEndpoints();
         // Add every new feature's `.Map<Feature>Endpoints()` call here.
         return app;
     }

@@ -18,11 +18,12 @@ public static class DomainConstants
     public static class CustomExceptionCodes
     {
         #region Not Found
-        public const int ITEM_NOT_FOUND = 1;
+        public const int EXAMPLEITEM_NOT_FOUND = 1;
+        // Add one <ENTITY>_NOT_FOUND = <n> constant per aggregate root that can be missing.
         #endregion
 
         #region Invalid Operation
-        public const int ITEM_ALREADY_EXISTS = 1;
+        // Add one <ENTITY>_ALREADY_EXISTS = <n> constant per aggregate root with a uniqueness invariant.
         #endregion
     }
 
@@ -30,11 +31,12 @@ public static class DomainConstants
     {
         public const int MIN_LENGTH_VALUE = 3;
 
-        public static class ItemLimits
+        public static class ExampleItemLimits
         {
             public const int MIN_LENGTH_NAME = MIN_LENGTH_VALUE;
             public const int MAX_LENGTH_NAME = 128;
             public const int MAX_LENGTH_DESCRIPTION = 512;
         }
+        // Add one nested <Entity>Limits class per entity with length-bound properties.
     }
 }

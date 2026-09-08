@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Ponce.Templates.APITemplate.Domain.Entities.Sample;
+using Ponce.Templates.APITemplate.Domain.Entities.Example;
 using Ponce.Templates.APITemplate.Infrastructure.Configurations;
 using Ponce.Templates.APITemplate.Infrastructure.Helpers.Factories;
 
@@ -20,7 +20,8 @@ namespace Ponce.Templates.APITemplate.Infrastructure.Contexts;
 /// </summary>
 public class AppDbContext(DbContextOptions<AppDbContext> options, DatabaseConnectionConfiguration configuration) : DbContext(options)
 {
-    public DbSet<Item> Items => Set<Item>();
+    public DbSet<ExampleItem> ExampleItems => Set<ExampleItem>();
+    // Add one DbSet<TEntity> property per aggregate root.
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -7,7 +7,7 @@ internal class SqliteConfigurationsStrategy : IDbConfigurationsStrategy
 {
     public ModelBuilder ApplyConfigurations(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new ItemSqliteConfiguration());
+        modelBuilder.ApplyConfiguration(new ExampleItemSqliteConfiguration());
         // Add one modelBuilder.ApplyConfiguration(new <Entity>SqliteConfiguration()) call per entity.
         return modelBuilder;
     }

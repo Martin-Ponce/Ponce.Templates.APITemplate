@@ -48,11 +48,10 @@ public static partial class WebApplicationExtensions
                 content = "<div style=\"color:red;\">Could not retrieve health details.</div>";
             }
             var html = $"""
-                <body style="background-color: aliceblue;">
-                    <div style="height: 20%; width: 100% ; background-color: rgb( 83, 156, 227); "></div>
-                    <div style="position:fixed; top:10%; left: 20%; background-color: white; width: 60%; height: 60%;text-align: center; padding-top:10%;font-family: 'Segoe UI', Geneva, Verdana, sans-serif;">
+                <body style="background-color: #121212;">
+                    <div style="position:fixed; top:10%; left: 20%; background-color: #1e1e1e; width: 60%; height: 60%;text-align: center; padding-top:10%;font-family: 'Segoe UI', Geneva, Verdana, sans-serif; color: #e0e0e0; box-shadow: 0 0 20px rgba(0,0,0,0.6);">
                         <h1 style="position:center">{mainText}</h1>
-                        <h3>version {version}</h3>
+                        <h3 style="color:#a0a0a0;">version {version}</h3>
                         {content}
                     </div>
                     <style>
@@ -73,12 +72,12 @@ public static partial class WebApplicationExtensions
                 gap: 10px;
                 padding: 10px 14px;
                 border-radius: 8px;
-                background: #f8f9fa;
+                background: #2a2a2a;
                 font-family: "Segoe UI", sans-serif;
                 font-size: 15px;
                 font-weight: 500;
-                color: #333;
-                box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+                color: #e0e0e0;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.4);
                 transition: transform 0.2s ease, box-shadow 0.2s ease;
                 margin-bottom: 20px;
                 justify-content: space-between;
@@ -86,7 +85,7 @@ public static partial class WebApplicationExtensions
 
             .health-item:hover {
                 transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+                box-shadow: 0 4px 12px rgba(0,0,0,0.6);
             }
 
             .health-icon {
@@ -106,15 +105,15 @@ public static partial class WebApplicationExtensions
             }
 
             .healthy {
-                background-color: #4caf50;
+                background-color: #43a047;
             }
 
             .unhealthy {
-                background-color: #e53935;
+                background-color: #d32f2f;
             }
 
             .warning {
-                background-color: #ffb300;
+                background-color: #f9a825;
                 color: black;
             }
 
@@ -129,7 +128,7 @@ public static partial class WebApplicationExtensions
                 bottom: 120%;
                 left: 50%;
                 transform: translateX(-50%);
-                background-color: #222;
+                background-color: #000;
                 color: #fff;
                 padding: 6px 10px;
                 border-radius: 6px;
@@ -141,6 +140,7 @@ public static partial class WebApplicationExtensions
                 transition-delay: 0.3s;
                 user-select: none;
                 z-index: 10;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.5);
             }
 
             .health-item:hover::after {

@@ -7,7 +7,7 @@ internal class SqlServerConfigurationsStrategy : IDbConfigurationsStrategy
 {
     public ModelBuilder ApplyConfigurations(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new ItemSqlServerConfiguration());
+        modelBuilder.ApplyConfiguration(new ExampleItemSqlServerConfiguration());
         // Add one modelBuilder.ApplyConfiguration(new <Entity>SqlServerConfiguration()) call per entity.
         return modelBuilder;
     }
