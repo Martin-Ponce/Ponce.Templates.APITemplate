@@ -3,7 +3,7 @@
 [Leer en español](#español)
 
 ## English
-A template that follows my own architecture to use as a base in any new project, special thanks to my good friend Kiyoshi, i owe him for many of the features i use in this template.
+A template that follows my own architecture to use as a base in any new project, special thanks to my good friend Kiyoshi Shimizu, i owe him for many of the features i use in this template.
 
 ## Docs
 
@@ -68,7 +68,7 @@ Each guide walks through the steps with the exact code.
 
 [English](#docs)
 
-Una plantilla que sigue mi propia arquitectura para usarla como base en cualquier proyecto nuevo, agradecimiento especial a mi buen amigo Kiyoshi, le debo muchas de las características que uso aqui.
+Una plantilla que sigue mi propia arquitectura para usarla como base en cualquier proyecto nuevo, mil gracias a mi buen amigo Kiyoshi Shimizu, le debo muchas de las características que uso aqui.
 
 Las guías están en inglés, aquí va un resumen rápido para ubicarte.
 
