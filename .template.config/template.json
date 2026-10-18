@@ -30,6 +30,13 @@
         "**/[Oo]bj/**",
         ".git/**",
         ".vs/**",
+        ".claude/**",
+        "CLAUDE.md",
+        "CLAUDE.local.md",
+        "**/Logs/**",
+        "**/*.db",
+        "**/*.db-shm",
+        "**/*.db-wal",
         "**/*.user",
         ".template.config/**"
       ]

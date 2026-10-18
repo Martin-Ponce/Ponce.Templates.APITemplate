@@ -6,10 +6,7 @@ using static Ponce.Templates.APITemplate.Infrastructure.Mapping.ColumnTypes.Sqli
 
 namespace Ponce.Templates.APITemplate.Infrastructure.Mapping.Sqlite;
 
-/// <summary>
-/// SQLite mapping for <see cref="ExampleItem"/>. Every column has an explicit name, store type and
-/// (where it applies) max length - nothing is left for EF Core to infer.
-/// </summary>
+/// <summary>SQLite mapping for example items.</summary>
 internal class ExampleItemSqliteConfiguration : IEntityTypeConfiguration<ExampleItem>
 {
     public void Configure(EntityTypeBuilder<ExampleItem> builder)

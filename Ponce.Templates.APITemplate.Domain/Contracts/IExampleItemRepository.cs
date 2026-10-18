@@ -2,7 +2,7 @@ using Ponce.Templates.APITemplate.Domain.Entities.Example;
 
 namespace Ponce.Templates.APITemplate.Domain.Contracts;
 
-/// <summary>Repository contract for the "ExampleItem" vertical slice, implemented in the Infrastructure layer.</summary>
+/// <summary>Repository contract for example items.</summary>
 public interface IExampleItemRepository : IRepository
 {
     IQueryable<ExampleItem> QueryExampleItems();

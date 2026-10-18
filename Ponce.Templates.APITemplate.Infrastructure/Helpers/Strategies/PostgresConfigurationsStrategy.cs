@@ -8,7 +8,6 @@ internal class PostgresConfigurationsStrategy : IDbConfigurationsStrategy
     public ModelBuilder ApplyConfigurations(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new ExampleItemPostgresConfiguration());
-        // Add one modelBuilder.ApplyConfiguration(new <Entity>PostgresConfiguration()) call per entity.
         return modelBuilder;
     }
 }

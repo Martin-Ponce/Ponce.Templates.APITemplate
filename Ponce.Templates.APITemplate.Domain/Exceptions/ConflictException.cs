@@ -1,6 +1,6 @@
 namespace Ponce.Templates.APITemplate.Domain.Exceptions;
 
-/// <summary>The requested operation conflicts with the current state of a resource. Mapped to HTTP 409.</summary>
+/// <summary>Conflicts with the current state of a resource (409).</summary>
 public class ConflictException : AppException
 {
     public static readonly int CONFLICT_FOUND = 1;

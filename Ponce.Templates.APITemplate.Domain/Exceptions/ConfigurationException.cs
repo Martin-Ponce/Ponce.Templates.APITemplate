@@ -1,9 +1,6 @@
 namespace Ponce.Templates.APITemplate.Domain.Exceptions;
 
-/// <summary>
-/// A required application/environment configuration value (appsettings, environment variables) is
-/// missing or invalid. Thrown by the configuration-reading extensions in the API layer during startup.
-/// </summary>
+/// <summary>A config value (appsettings or env var) is missing or invalid.</summary>
 public class ConfigurationException : AppException
 {
     public static readonly int MISSING_CONFIGURATION = 1;

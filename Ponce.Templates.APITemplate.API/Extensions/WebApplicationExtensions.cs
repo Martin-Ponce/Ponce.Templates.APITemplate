@@ -31,10 +31,8 @@ public static class WebApplicationExtensions
                               .WithApiVersionSet(versionSet)
                               .RequireRateLimiting(rateLimitingPolicy)
                               .AddOpenApi();
-        // Once you add authentication back, chain `.RequireAuthorization()` here too.
         apiEndpoints
             .MapExampleItemEndpoints();
-        // Add every new feature's `.Map<Feature>Endpoints()` call here.
         return app;
     }
 
@@ -53,7 +51,7 @@ public static class WebApplicationExtensions
     private static ApiVersionSet GetVersionSet(this WebApplication app)
     {
         return app.NewApiVersionSet()
-                    .HasApiVersion(VERSION_1) // Add every supported version here.
+                    .HasApiVersion(VERSION_1)
                     .ReportApiVersions()
                     .Build();
     }

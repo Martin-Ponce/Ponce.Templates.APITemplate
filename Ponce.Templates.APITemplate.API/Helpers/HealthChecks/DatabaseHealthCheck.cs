@@ -4,9 +4,7 @@ using Ponce.Templates.APITemplate.Infrastructure.Contexts;
 
 namespace Ponce.Templates.APITemplate.API.Helpers.HealthChecks;
 
-/// <summary>
-/// Validates database connectivity via <see cref="DatabaseFacade.CanConnectAsync"/>.
-/// </summary>
+/// <summary>Checks that the database is reachable.</summary>
 public class DatabaseHealthCheck(AppDbContext context) : IHealthCheck
 {
     private readonly AppDbContext _context = context;

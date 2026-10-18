@@ -66,8 +66,7 @@ public static class Program
         Environment.Exit(1);
     }
 
-    // Creates the database/applies pending migrations on startup. Swap EnsureCreatedAsync for
-    // MigrateAsync once you start using EF Core migrations (dotnet ef migrations add ...).
+    // Creates the database on startup, switch to MigrateAsync once you use migrations
     private static async Task EnsureDatabaseCreated(IServiceProvider serviceProvider)
     {
         using var scope = serviceProvider.CreateScope();

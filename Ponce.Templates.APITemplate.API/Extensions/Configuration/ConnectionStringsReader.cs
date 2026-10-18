@@ -7,10 +7,6 @@ namespace Ponce.Templates.APITemplate.API.Extensions.Configuration;
 
 public static partial class ConfigurationExtensions
 {
-    /// <summary>
-    /// Reads a "DatabaseConnections:{sectionName}:ConnectionString" value, with environment
-    /// variable override support.
-    /// </summary>
     private static string GetConnectionStringValue(this IConfiguration configuration, string sectionName)
     {
         var connectionString = configuration[$"DatabaseConnections:{sectionName}:ConnectionString"].TryOverwriteWithEnviromentValue($"{sectionName}_CONNECTION_STRING") ??

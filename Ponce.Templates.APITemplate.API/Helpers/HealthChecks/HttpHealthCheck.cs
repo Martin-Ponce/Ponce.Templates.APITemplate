@@ -4,7 +4,7 @@ using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace Ponce.Templates.APITemplate.API.Helpers.HealthChecks;
 
-/// <summary>Generic health check for an external HTTP dependency, with an optional login step.</summary>
+/// <summary>Health check for an external HTTP service, with an optional login step.</summary>
 public class HttpHealthCheck(string url, string urlLogin = "", object? loginRequest = null) : IHealthCheck
 {
     private readonly string _url = url;

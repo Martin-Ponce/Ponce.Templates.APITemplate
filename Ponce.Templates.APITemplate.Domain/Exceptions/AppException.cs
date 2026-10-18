@@ -1,10 +1,6 @@
 namespace Ponce.Templates.APITemplate.Domain.Exceptions;
 
-/// <summary>
-/// Base type for every domain/application exception in this template: a typed exception with a
-/// numeric <c>Code</c> and optional <c>Args</c>, with a specific subtype per error category, that
-/// <see cref="Middlewares.ErrorHandlerMiddleware"/> maps to an HTTP status code.
-/// </summary>
+/// <summary>Base exception with a code and optional args, the error middleware maps each subtype to a status code.</summary>
 public abstract class AppException : Exception
 {
     public int Code { get; }

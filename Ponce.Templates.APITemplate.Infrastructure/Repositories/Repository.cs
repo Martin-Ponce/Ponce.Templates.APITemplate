@@ -5,7 +5,7 @@ using Ponce.Templates.APITemplate.Domain.Contracts;
 
 namespace Ponce.Templates.APITemplate.Infrastructure.Repositories;
 
-/// <summary>Generic base repository: every feature-specific repository derives from this.</summary>
+/// <summary>Base repository, feature repositories derive from this.</summary>
 public class Repository<TContext>(TContext context) : IRepository where TContext : DbContext
 {
     protected readonly TContext _context = context;

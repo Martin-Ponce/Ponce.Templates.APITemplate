@@ -3,13 +3,13 @@ using Ponce.Templates.APITemplate.Domain.Validators.Entities;
 
 namespace Ponce.Templates.APITemplate.Domain.Entities.Example;
 
-/// <summary>Aggregate root for the "ExampleItem" feature: private setters, invariants enforced in the constructor via <see cref="ExampleItemValidator"/>.</summary>
+/// <summary>Example aggregate root, rules are enforced in the constructor.</summary>
 public class ExampleItem : AggregateRoot
 {
     public string Name { get; private set; } = default!;
     public string? Description { get; private set; }
 
-    private ExampleItem() { } // Required by EF Core
+    private ExampleItem() { }
 
     public ExampleItem(string name, string? description)
     {

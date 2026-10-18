@@ -9,11 +9,7 @@ using static Ponce.Templates.APITemplate.Domain.DomainConstants;
 
 namespace Ponce.Templates.APITemplate.Application.Services;
 
-/// <summary>
-/// Application service for the "ExampleItem" feature: owns its business logic (existence checks,
-/// orchestration of repository calls + SaveChanges, logging) and translates between transport DTOs
-/// and the domain model.
-/// </summary>
+/// <summary>Business logic for example items, maps between DTOs and the domain model.</summary>
 public class ExampleItemService(IExampleItemRepository exampleItemRepository, ILogger<ExampleItemService> logger)
 {
     private readonly IExampleItemRepository _exampleItemRepository = exampleItemRepository;

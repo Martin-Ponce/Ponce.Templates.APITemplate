@@ -1,9 +1,6 @@
 namespace Ponce.Templates.APITemplate.Domain.Exceptions;
 
-/// <summary>
-/// The caller is not authenticated (mapped to HTTP 401) or, when built via
-/// <see cref="InsufficientPermissions"/>, is authenticated but lacks permissions (mapped to HTTP 403).
-/// </summary>
+/// <summary>Not authenticated (401), or lacking permissions when built via InsufficientPermissions (403).</summary>
 public class UnauthorizedAppException : AppException
 {
     public static readonly int NOT_AUTHENTICATED = 1;

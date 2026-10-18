@@ -1,9 +1,6 @@
 namespace Ponce.Templates.APITemplate.Infrastructure.Mapping.ColumnTypes;
 
-/// <summary>
-/// SQL Server store type names used by the <c>*SqlServerConfiguration</c> mapping classes.
-/// Add entries here as new column types are needed - never let EF Core infer a store type.
-/// </summary>
+/// <summary>SQL Server store types used by the mappings.</summary>
 internal static class SqlServerColumnTypes
 {
     public const string NVARCHAR = "nvarchar";

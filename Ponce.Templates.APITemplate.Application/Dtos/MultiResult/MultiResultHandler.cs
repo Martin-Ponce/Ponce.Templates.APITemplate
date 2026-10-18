@@ -1,10 +1,6 @@
 namespace Ponce.Templates.APITemplate.Application.Dtos.MultiResult;
 
-/// <summary>
-/// Accumulates the outcome of a batch/bulk operation (one that processes many items and wants to
-/// report per-item success/failure instead of failing the whole request). Used together with
-/// the API layer's MultiResponse DTOs and <c>CustomResult.PartialContent</c>.
-/// </summary>
+/// <summary>Collects per-item success/failure for bulk operations.</summary>
 public class MultiResultHandler
 {
     private readonly List<Result> _success = [];

@@ -6,16 +6,7 @@ using Ponce.Templates.APITemplate.Domain.Exceptions;
 
 namespace Ponce.Templates.APITemplate.API.Middlewares;
 
-/// <summary>
-/// Central exception handler: maps each <see cref="AppException"/> subtype (and a couple of
-/// well-known framework exceptions) to an HTTP status code and a consistent JSON error payload.
-/// <para>
-/// The original project also localized the error message per <c>Code</c> via
-/// <c>IStringLocalizer</c>/a shared .resx resource, since the message depended on the caller's
-/// language. This template returns the exception's own message directly; re-introduce a localizer
-/// here if you need multi-language error messages.
-/// </para>
-/// </summary>
+/// <summary>Turns exceptions into a status code and a consistent JSON error.</summary>
 public class ErrorHandlerMiddleware(ILogger<ErrorHandlerMiddleware> logger, RequestDelegate next)
 {
     private readonly ILogger<ErrorHandlerMiddleware> _logger = logger;

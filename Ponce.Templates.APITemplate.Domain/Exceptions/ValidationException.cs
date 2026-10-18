@@ -1,6 +1,6 @@
 namespace Ponce.Templates.APITemplate.Domain.Exceptions;
 
-/// <summary>An argument/input received an invalid value. Mapped to HTTP 400.</summary>
+/// <summary>Invalid input (400).</summary>
 public class ValidationException : AppException
 {
     public static readonly int INVALID_FORMAT = 1;

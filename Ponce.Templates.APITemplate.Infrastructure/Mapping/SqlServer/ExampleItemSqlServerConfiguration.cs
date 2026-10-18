@@ -6,10 +6,7 @@ using static Ponce.Templates.APITemplate.Infrastructure.Mapping.ColumnTypes.SqlS
 
 namespace Ponce.Templates.APITemplate.Infrastructure.Mapping.SqlServer;
 
-/// <summary>
-/// SQL Server mapping for <see cref="ExampleItem"/>. Every column has an explicit name, store type
-/// and (where it applies) max length - nothing is left for EF Core to infer.
-/// </summary>
+/// <summary>SQL Server mapping for example items.</summary>
 internal class ExampleItemSqlServerConfiguration : IEntityTypeConfiguration<ExampleItem>
 {
     public void Configure(EntityTypeBuilder<ExampleItem> builder)

@@ -5,10 +5,7 @@ using Ponce.Templates.APITemplate.Application.Dtos.MultiResult;
 
 namespace Ponce.Templates.APITemplate.API.Helpers;
 
-/// <summary>
-/// Builds an HTTP 206 (Partial Content) response for bulk operations, choosing between a simple
-/// or an extended payload shape based on the "X-Response-Format" request header.
-/// </summary>
+/// <summary>Builds the 206 response for bulk operations, shape depends on the X-Response-Format header.</summary>
 public static class CustomResult
 {
     private static readonly JsonSerializerOptions _jsonSerializerOptions = new()

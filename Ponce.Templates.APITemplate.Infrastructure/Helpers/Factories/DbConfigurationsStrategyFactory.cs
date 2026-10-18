@@ -5,7 +5,7 @@ using static Ponce.Templates.APITemplate.Domain.DomainConstants;
 
 namespace Ponce.Templates.APITemplate.Infrastructure.Helpers.Factories;
 
-/// <summary>Resolves the <see cref="IDbConfigurationsStrategy"/> that maps every entity for the configured database provider.</summary>
+/// <summary>Picks the mapping strategy for the configured provider.</summary>
 internal static class DbConfigurationsStrategyFactory
 {
     public static IDbConfigurationsStrategy GetStrategy(string provider) => provider switch

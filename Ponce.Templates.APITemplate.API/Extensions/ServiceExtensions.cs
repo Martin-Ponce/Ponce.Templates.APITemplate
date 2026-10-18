@@ -24,11 +24,6 @@ namespace Ponce.Templates.APITemplate.API.Extensions;
 
 public static class ServiceExtensions
 {
-    // Authentication was intentionally left out of this template - the task this was generated
-    // from said to ignore login/license logic. Add your own scheme here (JWT bearer, API key,
-    // etc.) and call app.UseAuthentication()/UseAuthorization() + .RequireAuthorization() on the
-    // endpoint groups in WebApplicationExtensions.MapEndpoints once you do.
-
     public static IServiceCollection ConfigureSwagger(this IServiceCollection services)
     {
         services.AddEndpointsApiExplorer();
@@ -95,7 +90,7 @@ public static class ServiceExtensions
     {
         services.AddHealthChecks()
             .AddCheck("Liveness", () => HealthCheckResult.Healthy($"API started correctly. v{ASSEMBLY_VERSION}"))
-            .AddCheck<DatabaseHealthCheck>("Database", tags: ["ready"]); // Add one tagged "ready" check per external dependency the API needs to be considered ready.
+            .AddCheck<DatabaseHealthCheck>("Database", tags: ["ready"]);
         return services;
     }
 
@@ -115,11 +110,9 @@ public static class ServiceExtensions
 
         // Repositories
         services.AddScoped<IExampleItemRepository, ExampleItemRepository>();
-        // Add one services.AddScoped<I<Feature>Repository, <Feature>Repository>() call per feature.
 
         // Application services
         services.AddScoped<ExampleItemService>();
-        // Add one services.AddScoped<<Feature>Service>() call per feature.
         return services;
     }
 
@@ -169,7 +162,7 @@ public static class ServiceExtensions
             options.AssumeDefaultVersionWhenUnspecified = true;
             options.ReportApiVersions = true;
             options.ApiVersionReader = ApiVersionReader.Combine(
-                new HeaderApiVersionReader("X-Version") // Header X-Version: 1.0
+                new HeaderApiVersionReader("X-Version")
             );
         }).AddApiExplorer(options =>
         {

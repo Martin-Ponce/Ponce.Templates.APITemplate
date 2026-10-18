@@ -38,7 +38,4 @@ public static partial class ConfigurationExtensions
             );
         return result;
     }
-
-    // Sensitive configuration (e.g. connection strings) should be supplied via user-secrets,
-    // environment variables, or a secret manager rather than stored in plain appsettings.json.
 }

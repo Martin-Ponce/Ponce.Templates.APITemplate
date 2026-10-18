@@ -1,9 +1,6 @@
 namespace Ponce.Templates.APITemplate.API.Endpoints.ExampleItems;
 
-/// <summary>
-/// Endpoint group demonstrating the minimal-API pattern used across the template: one static class
-/// per endpoint group that maps a route group, and one static class per endpoint.
-/// </summary>
+/// <summary>Maps the example item endpoints.</summary>
 public static class ExampleItemEndpointGroup
 {
     public static RouteGroupBuilder MapExampleItemEndpoints(this RouteGroupBuilder appEndpoints)

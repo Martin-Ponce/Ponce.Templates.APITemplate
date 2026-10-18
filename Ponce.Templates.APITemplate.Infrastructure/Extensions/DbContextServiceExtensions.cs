@@ -6,9 +6,7 @@ using static Ponce.Templates.APITemplate.Domain.DomainConstants;
 
 namespace Ponce.Templates.APITemplate.Infrastructure.Configurations;
 
-/// <summary>
-/// Wires up <see cref="AppDbContext"/> against whichever provider is configured.
-/// </summary>
+/// <summary>Registers the DbContext for whichever provider is configured.</summary>
 public static class DbContextServiceExtensions
 {
     public static IServiceCollection AddAppDbContext(this IServiceCollection services, DatabaseConnectionConfiguration configuration)

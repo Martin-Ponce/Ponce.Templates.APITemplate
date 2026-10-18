@@ -14,7 +14,6 @@ public static class ApiConstants
         public const string SIMPLE_MULTI_RESULT = "simplemultiresult";
     }
 
-    // TODO: rename to your API's name - used in Swagger title, the welcome page and the Serilog table name.
     public const string APP_NAME = "API Template";
     public static string LOGGER_TABLE_NAME => $"{APP_NAME}Logs";
     public const string ALLOW_ALL_CORS_POLICY = "AllowAll";
